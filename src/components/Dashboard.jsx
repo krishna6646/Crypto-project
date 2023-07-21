@@ -59,7 +59,7 @@ function Dashboard() {
       <div className='rbox'>
         <p className='db'>DashBoard</p>
         <div className='rbox1'>
-          <span>connect your wallet</span>
+          <span>{ }</span>
           <span>Connect more than one account to experience the</span>
           <span style={{ padding: "15px" }}>full potential of this dappl</span>
           <button className='button'>Connect Metamask</button>

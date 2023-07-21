@@ -1,11 +1,12 @@
 //import img1 from './assests/img1.jpg'
-
 import './welcome.css'
+import { Navbar } from './Navbar';
+import Footer from './Footer';
 
 function Welcome() {
     return (
         <>
-            
+            <Navbar />
             <div className='main'>
                 <div className="container-1">
                     <div className="main-1">
@@ -53,6 +54,7 @@ function Welcome() {
                 </div>
 
             </div>
+            <Footer />
         </>
     );
 }
