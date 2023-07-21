@@ -1,0 +1,222 @@
+.dbcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;  
+    
+}
+body {
+    font-family: 'Pangolin';font-size: 22px;
+    
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.ul1,li{
+    list-style:  none;
+    padding: 25px;
+    font-size: 1.5rem;
+    
+}
+.li1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: bisque;
+}
+.lbox{
+    background-color: rgb(29, 28, 27);
+    color: white;
+    width: 15%;
+    height: 935px;
+    padding: 50px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.rbox{
+    font-weight: 100;
+    background-color: rgb(16, 13, 9);
+    color: bisque;
+    width:85%;
+    height: 935px;
+    
+   
+}
+.db{
+   
+    margin: 20px;
+    padding: 50px;
+}
+.rbox1{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.rbox1,span{
+    margin: 5px;
+    padding: 5px;
+    font-size: 2rem;
+}
+.button {
+    background-color: blue; /* Green */
+    border: none;
+    color: bisque;
+    padding: 23px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 20px;
+  }
+/* Adjustments for small screens */
+@media only screen and (max-width: 768px) {
+    .dbcontainer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .lbox {
+      width: 100%;
+      height: auto;
+      padding: 25px;
+    }
+    .lbox::before {
+        content: "\2630"; /* Hamburger symbol */
+        font-size: 2rem;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: white;
+        cursor: pointer;
+      }
+      
+    .rbox {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Adjustments for medium screens */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .dbcontainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .lbox {
+      width: 30%;
+      height: auto;
+      padding: 50px;
+    }
+  
+    .rbox {
+      width: 70%;
+      height: auto;
+    }
+  }
+  
+  /* Adjustments for large screens
+  @media only screen and (min-width: 1025px) {
+    .dbcontainer {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .lbox {
+      width: 15%;
+      height: auto;
+      padding: 50px;
+    }
+  
+    .rbox {
+      width: 85%;
+      height: auto;
+    }
+  }
+  
+  .dbcontainer {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  body {
+    font-family: 'Pangolin';
+    font-size: 22px;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  }
+  
+  .ul1,
+  li {
+    list-style: none;
+    padding: 25px;
+    font-size: 1.5rem;
+  }
+  
+  .li1:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: bisque;
+  }
+  
+  .lbox {
+    background-color: rgb(29, 28, 27);
+    color: white;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    margin: 0;
+  }
+  
+  .rbox {
+    font-weight: 100;
+    background-color: rgb(16, 13, 9);
+    color: bisque;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+  }
+  
+  .db {
+    margin: 20px;
+    padding: 50px;
+  }
+  
+  .rbox1 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .rbox1,
+  span {
+    margin: 5px;
+    padding: 5px;
+    font-size: 2rem;
+  }
+  
+  .button {
+    background-color: blue;
+    border: none;
+    color: bisque;
+    padding: 23px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 20px;
+  }
+   */

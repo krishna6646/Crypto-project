@@ -1,15 +1,38 @@
-//import logo from './logo.svg';
-import './App.css';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
+import React from 'react'
 
-function App() {
+import { Navbar } from './components/Navbar'
+import Welcome from './components/Welcome'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer'
+
+import LoginForm from './components/LoginForm'
+
+import './components/welcome.css'
+import Dashboard from './components/Dashboard'
+import Form from './components/Form'
+
+
+export const App = () => {
   return (
-    <div className="App">
-      <NavBar/>
-      <Home/>
-    </div>
-  );
-}
 
-export default App;
+<>
+          <Navbar />
+          <Welcome />
+          
+          
+            <Routes>
+              <Route path='/login' element={<LoginForm />}>
+              </Route>
+              <Route path='/signin' element={<Form />}>
+              </Route>
+              <Route path='/Dashboard' element={<Dashboard />}/>
+              
+            </Routes>
+            
+         
+          <Footer />
+          </>     
+      
+
+      );
+}
