@@ -78,6 +78,7 @@
   }
   
   form {
+    
     display: flex;
     flex-direction: column;
   }
@@ -91,8 +92,8 @@
     padding: 8px;
     margin-bottom: 16px;
     border: none;
-    background-color: #444;
-    color: #fff;
+    background-color: #fff;
+    color: black;
   }
   
   .error {
@@ -128,7 +129,7 @@
   .form {
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 250px;
   }
   
   .container {

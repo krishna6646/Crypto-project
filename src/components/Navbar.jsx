@@ -28,8 +28,8 @@ export const Navbar = () => {
                         </li>
                         <li className='nav-item'>Build <MdKeyboardArrowDown className='key-arrow' /></li>
                         <li className='nav-item'>Resources <MdKeyboardArrowDown className='key-arrow' /></li>
-                        <li className='nav-item' onClick={() => setOpen(!open)}>Sign Up</li>
-                        <li className='nav-item' onClick={() => setOpen1(!open1)}>log in Up</li>
+                        <li className='nav-item' onClick={() => setOpen(!open)}>Connect</li>
+                        
                     </div>
                     <li onClick={() => setMobDropDown(!mobdropdown)} className='mobile-nav-item'><FaBars /></li>
                 </div>

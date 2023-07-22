@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/dashboard.css';
 
 function Dashboard() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
+  const [user, setUser] = useState()
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    fetch("http://localhost:5000/api/users/getuser", {
+      method: "get",
+      headers: { token: localStorage.getItem("token") }
+    }).then((data) => data.json())
+      .then((data) => setUser(data))
+  }, [])
+  console.log(user)
   return (
+
     <div className={`dbcontainer ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className='lbox'>
         <ul className={`ul1 ${isMenuOpen ? 'menu-open' : ''}`}>
           <a href="/">Mafia</a>
+          {/* left side of dashboard */}
           <li className='li1'>
             <span className="material-symbols-outlined">
               DashBoard
@@ -56,17 +66,65 @@ function Dashboard() {
           <span></span>
         </div>
       </div>
+      {/* right side of dashboard */}
       <div className='rbox'>
-        <p className='db'>DashBoard</p>
+        {/* for user info */}
+        <div className='db-main'>
+          <p className='db'>
+            {user.user.username}'s Wallet
+          </p>
+        </div>
         <div className='rbox1'>
-          <span>{ }</span>
-          <span>Connect more than one account to experience the</span>
-          <span style={{ padding: "15px" }}>full potential of this dappl</span>
-          <button className='button'>Connect Metamask</button>
+          <div className='wallet-container'>
+            <span className='wallet-id'>
+              {user.user.primarywallet.address}
+            </span>
+            <span class="material-symbols-outlined">
+              content_copy
+            </span>
+          </div>
+          <span>0 ETH</span>
+          {/* for symbol */}
+          <div className='symbol'>
+
+            <div className='symbol-1'>
+              <button class="material-symbols-outlined">
+                local_mall
+              </button>
+              Buy
+            </div>
+
+            <div className='symbol-2'>
+              <button class="material-symbols-outlined">
+                Send
+              </button>
+              send
+            </div>
+
+            <div className='symbol-3'>
+              <button class="material-symbols-outlined">
+                swap_horiz
+              </button>
+              Swap
+            </div>
+            {/* for token */}
+           
+
+          </div>
+          <div className='token'>
+                <div className='token1'>
+                    <h2>Token</h2>
+                </div>
+                <div className='activity'>
+                  <h2>Activity</h2>
+                </div>
+                
+            </div>
         </div>
       </div>
     </div>
   );
 }
+
 
 export default Dashboard;

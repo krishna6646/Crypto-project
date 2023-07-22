@@ -17,9 +17,9 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     navigate('/Dashboard')
-   
+
     e.preventDefault();
-    
+
     const response = await fetch("http://localhost:5000/api/users/login", {
       method: 'POST',
       headers: {
@@ -28,9 +28,10 @@ const LoginForm = () => {
       body: JSON.stringify({ email: crendential.email, password: crendential.password })
     });
     const json = await response.json()
+    localStorage.setItem("token", json.token)
     console.log(json);
-   
-   
+
+
 
   }
 
@@ -39,6 +40,7 @@ const LoginForm = () => {
     <form onSubmit={handleSubmit} className='form'>
       <div className='form1'>
         <div>
+          <h2>Login</h2>
           <label htmlFor="email" name="email"  >Email :</label>
           <input
             type="email"

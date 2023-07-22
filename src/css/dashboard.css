@@ -40,12 +40,41 @@ body {
 }
 .rbox{
     font-weight: 100;
-    background-color: rgb(16, 13, 9);
-    color: bisque;
+    background-color: #1d1c1b;
+    color: rgb(224, 224, 218);
+    background-color: #3b3939;
     width:85%;
     height: 935px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     
    
+}
+.wallet-id{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ border: 4px solid black;
+ border-radius: 20px;
+ width: 275px;
+}
+.wallet-container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.db-main{
+  background-color: 0a0909;
+  align-items: center;
+   justify-content: center;
+   display: flex;
+   width: 80%;
+   /* border: 1px solid black; */
+   height: 8%;
+   font-size: 30px;
+   /* box-shadow: 1px 6px 20px 15px; */
 }
 .db{
    
@@ -57,6 +86,9 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 80%;
     
 }
 .rbox1,span{
@@ -75,6 +107,50 @@ body {
     font-size: 22px;
     border-radius: 20px;
   }
+  .material-symbols-outlined{
+    font-size: 30px;
+    border-radius: 25px;
+  }
+  .symbol{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .symbol-1,
+  .symbol-2,
+  .symbol-3{
+    font-size: 3.5vh;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .token{
+    justify-content: space-between;
+    display: flex;
+    width: 130vh;
+    font-size: 30px;
+  }
+  .token1{
+    /* border: 1px solid black; */
+    width: 85vh;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    height: 50vh;
+  }
+  .activity{
+    /* border: 1px solid black; */
+    width: 85vh;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    height: 50vh;
+  }
+
+  /* .button{
+   
+  } */
 /* Adjustments for small screens */
 @media only screen and (max-width: 768px) {
     .dbcontainer {
@@ -89,7 +165,7 @@ body {
     }
     .lbox::before {
         content: "\2630"; /* Hamburger symbol */
-        font-size: 2rem;
+        font-size: 20px;
         position: absolute;
         top: 15px;
         right: 15px;
