@@ -13,6 +13,7 @@ import Form from './components/Form'
 import { Mycompo } from './components/Mycompo'
 
 
+
 export const App = () => {
   return (
 
@@ -23,6 +24,7 @@ export const App = () => {
         <Route path='/signin' element={<Form />} />
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
+    
     </>
 
 

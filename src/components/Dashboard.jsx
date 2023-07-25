@@ -1,23 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import '../css/dashboard.css';
+import copy from "copy-to-clipboard";
 
 function Dashboard() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [copyText, setCopyText] = useState('');
   const [user, setUser] = useState()
+
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
-  };
+  }
+
+  const handleCopyText = (e) => {
+    setCopyText(e.target.value);
+  }
+
+  const copyToClipboard = () => {
+    copy(user?.user.primarywallet.address);
+    alert(`You have copied user id`);
+  }
 
   useEffect(() => {
     fetch("http://localhost:5000/api/users/getuser", {
       method: "get",
       headers: { token: localStorage.getItem("token") }
-    }).then((data) => data.json())
-      .then((data) => setUser(data))
-  }, [])
-  console.log(user)
-  return (
+    })
+      .then((data) => data.json())
+      .then((data) => setUser(data));
+  }, []);
 
+  return (
     <div className={`dbcontainer ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className='lbox'>
         <ul className={`ul1 ${isMenuOpen ? 'menu-open' : ''}`}>
@@ -71,60 +83,53 @@ function Dashboard() {
         {/* for user info */}
         <div className='db-main'>
           <p className='db'>
-            {user.user.username}'s Wallet
+            {user?.user.username}'s Wallet
           </p>
         </div>
         <div className='rbox1'>
           <div className='wallet-container'>
-            <span className='wallet-id'>
-              {user.user.primarywallet.address}
+            <span id="walletAddress" className='wallet-id'>
+              {user?.user.primarywallet.address}
             </span>
-            <span class="material-symbols-outlined">
+            <button className="material-symbols-outlined" onClick={copyToClipboard}>
               content_copy
-            </span>
+            </button>
           </div>
           <span>0 ETH</span>
           {/* for symbol */}
           <div className='symbol'>
-
             <div className='symbol-1'>
-              <button class="material-symbols-outlined">
+              <button className="material-symbols-outlined">
                 local_mall
               </button>
               Buy
             </div>
-
             <div className='symbol-2'>
-              <button class="material-symbols-outlined">
+              <button className="material-symbols-outlined">
                 Send
               </button>
-              send
+              Send
             </div>
-
             <div className='symbol-3'>
-              <button class="material-symbols-outlined">
+              <button className="material-symbols-outlined">
                 swap_horiz
               </button>
               Swap
             </div>
             {/* for token */}
-           
-
           </div>
           <div className='token'>
-                <div className='token1'>
-                    <h2>Token</h2>
-                </div>
-                <div className='activity'>
-                  <h2>Activity</h2>
-                </div>
-                
+            <div className='token1'>
+              <h2>Token</h2>
             </div>
+            <div className='activity'>
+              <h2>Activity</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
-}
-
+};
 
 export default Dashboard;

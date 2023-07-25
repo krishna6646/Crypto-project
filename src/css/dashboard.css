@@ -4,6 +4,9 @@
     align-items:center;  
     
 }
+button{
+  background-color:rgb(158, 158, 228);
+}
 body {
     font-family: 'Pangolin';font-size: 22px;
     

@@ -21,7 +21,7 @@ function Welcome() {
 
                 <div className="container-2">
                     <div className="main-1-image">
-                        <img className="img" src="./assests/img1.jpg" alt="logo" />
+                        <img className="img" src="./assests/im2.svg" alt="logo" />
                     </div>
                     <div className="main-1">
                         <h1 className='h1'>A Crypto wallet & gateway to blockchain app</h1>
@@ -38,12 +38,12 @@ function Welcome() {
                         <p>Trusted by over 30millons users worldwide</p>
                     </div>
                     <div className="main-1-image">
-                        <img className="img" src="./assests/img1.jpg" alt="logo" />
+                        <img className="img" src="./assests/im3.svg" alt="logo" />
                     </div>
                 </div>
                 <div className="container-4">
                     <div className="main-1-image">
-                        <img className="img" src="./assests/img1.jpg" alt="logo" />
+                        <img className="img" src="./assests/im4.svg" alt="logo" />
                     </div>
                     <div className="main-1">
                         <h1 className='h1'>A Crypto wallet & gateway to blockchain app</h1>
