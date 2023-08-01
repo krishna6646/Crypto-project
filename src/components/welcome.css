@@ -12,7 +12,7 @@
 .container-2,
 .container-3,
 .container-4 {
-    width:100%;
+    min-width: 100%;
     display: flex;
     height: auto;
     margin: 20px;

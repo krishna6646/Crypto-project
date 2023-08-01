@@ -3,6 +3,8 @@ import '../css/dashboard.css';
 import copy from "copy-to-clipboard";
 
 function Dashboard() {
+  const [showTokenData, setShowTokenData] = useState(true);
+  const [showActivityData, setShowActivityData] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [copyText, setCopyText] = useState('');
   const [user, setUser] = useState()
@@ -102,30 +104,42 @@ function Dashboard() {
               <button className="material-symbols-outlined">
                 local_mall
               </button>
-              Buy
+              <span> Buy</span>
+
             </div>
             <div className='symbol-2'>
               <button className="material-symbols-outlined">
                 Send
               </button>
-              Send
+              <span>Send</span>
             </div>
             <div className='symbol-3'>
               <button className="material-symbols-outlined">
                 swap_horiz
               </button>
-              Swap
+              <span>Swap</span>
             </div>
             {/* for token */}
           </div>
           <div className='token'>
             <div className='token1'>
-              <h2>Token</h2>
+              <h2 onClick={() => setShowTokenData(!showTokenData)}>Token</h2>
+              {showTokenData && (
+                <ul>
+                  <li>Eth</li>
+                  <li>+ Token</li>
+                  <li>refresh</li>
+                </ul>
+              )}
             </div>
             <div className='activity'>
-              <h2>Activity</h2>
+              <h2 onClick={() => setShowActivityData(!showActivityData)}>Activity</h2>
+              {showActivityData && (
+                <span>no activity</span>
+              )}
             </div>
           </div>
+
         </div>
       </div>
     </div>

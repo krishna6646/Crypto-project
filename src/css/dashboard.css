@@ -23,7 +23,8 @@ body {
 .ul1,li{
     list-style:  none;
     padding: 25px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: #0087ca;
     
 }
 .li1:hover{
@@ -32,7 +33,8 @@ body {
     color: bisque;
 }
 .lbox{
-    background-color: rgb(29, 28, 27);
+    background-color: #141618;  
+    font-size: 1.2rem;
     color: white;
     width: 15%;
     height: 935px;
@@ -43,9 +45,10 @@ body {
 }
 .rbox{
     font-weight: 100;
-    background-color: #1d1c1b;
-    color: rgb(224, 224, 218);
-    background-color: #3b3939;
+    font-size: 1.2rem;
+    background-color:#24272a;
+    color: #0087ca;
+    /* background-color: #3b3939; */
     width:85%;
     height: 935px;
     display: flex;
@@ -59,15 +62,17 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 1.2rem;
  border: 4px solid black;
  border-radius: 20px;
- width: 275px;
+ width: 205px;
 }
 .wallet-container{
   justify-content: center;
   align-items: center;
   display: flex;
 }
+
 .db-main{
   background-color: 0a0909;
   align-items: center;
@@ -76,7 +81,7 @@ body {
    width: 80%;
    /* border: 1px solid black; */
    height: 8%;
-   font-size: 30px;
+   font-size: 25px;
    /* box-shadow: 1px 6px 20px 15px; */
 }
 .db{
@@ -92,15 +97,17 @@ body {
     /* border: 1px solid black; */
     width: 80%;
     height: 80%;
-    
+    font-size: 1.2rem;
 }
 .rbox1,span{
-    margin: 5px;
-    padding: 5px;
-    font-size: 2rem;
+  
+    margin: 10px;
+    padding: 13px;
+    font-size: 1.5rem;
+
 }
 .button {
-    background-color: blue; /* Green */
+    background-color: #0087ca; /* Green */
     border: none;
     color: bisque;
     padding: 23px 45px;
@@ -108,13 +115,15 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 22px;
+    font-size: 1.2rem;
     border-radius: 20px;
   }
   .material-symbols-outlined{
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 25px;
   }
   .symbol{
+    color: #0087ca;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -122,13 +131,14 @@ body {
   .symbol-1,
   .symbol-2,
   .symbol-3{
-    font-size: 3.5vh;
+    font-size: 1.2rem;
     margin: 40px;
     display: flex;
     flex-direction: column;
    
   }
   .token{
+    font-size: 1.2rem;
     justify-content: space-between;
     display: flex;
     width: 130vh;
@@ -137,19 +147,70 @@ body {
   .token1{
     /* border: 1px solid black; */
     width: 85vh;
+    border-right: 5px solid #0087ca ;
+   
     justify-content: center;
     align-items:center;
-    display: flex;
-    height: 50vh;
+    margin-right: 200px;
+    margin-left: 150px;
+    font-size: 1.2rem;
+    height: 40vh;
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
   }
   .activity{
+    font-size: 1.2rem;
     /* border: 1px solid black; */
     width: 85vh;
     justify-content: center;
     align-items:center;
-    display: flex;
-    height: 50vh;
+    
+   
+    height: 40vh;
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
   }
+  .token1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 275px;
+    left: -160px;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .token1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .activity::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 275px;
+    left: -160px;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .activity:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+ 
+
+
+
+
 
   /* .button{
    
