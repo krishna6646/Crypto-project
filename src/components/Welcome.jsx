@@ -2,11 +2,13 @@
 import './welcome.css'
 import { Navbar } from './Navbar';
 import Footer from './Footer';
+// import Transaction from './Transaction';
 
 function Welcome() {
     return (
         <>
             <Navbar />
+        
             <div className='main'>
                 <div className="container-1">
                     <div className="main-1">
